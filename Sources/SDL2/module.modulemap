@@ -1,0 +1,6 @@
+
+module SDL2 [system] {
+    module SDL {
+        header "/opt/homebrew/include/SDL2/SDL.h"
+    }
+}
