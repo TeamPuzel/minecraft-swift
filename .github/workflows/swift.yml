@@ -19,6 +19,7 @@ jobs:
     - name: Build
       run: |
         brew install sdl2
-        swift build -v
+        brew --prefix
+        // swift build -v
     - name: Run tests
       run: swift test -v
