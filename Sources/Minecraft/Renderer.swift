@@ -35,7 +35,7 @@ enum GL {
     
     struct Vertex2D: Vertex { let x, y: Float }
     
-    struct VertexBuffer<T: Vertex>: Game.VertexBuffer {
+    struct VertexBuffer<T: Vertex>: Minecraft.VertexBuffer {
         
         private(set) var id: UInt32
         
@@ -83,7 +83,7 @@ enum GL {
         
     }
     
-    struct IndexBuffer<T: UnsignedInteger>: Game.IndexBuffer {
+    struct IndexBuffer<T: UnsignedInteger>: Minecraft.IndexBuffer {
         
         private(set) var id: UInt32
         
@@ -131,7 +131,7 @@ enum GL {
         
     }
     
-    struct VertexArray: Game.VertexArray {
+    struct VertexArray: Minecraft.VertexArray {
         
         struct Element {
             let index: UInt32
@@ -141,7 +141,7 @@ enum GL {
         
         private(set) var id: UInt32
         
-        func addBuffer(_ buffer: some Game.VertexBuffer) {
+        func addBuffer(_ buffer: some Minecraft.VertexBuffer) {
             //
         }
     }
