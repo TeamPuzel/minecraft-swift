@@ -19,5 +19,7 @@ let package = Package(
                 .aptItem(["libsdl2-dev"])
             ]
         ),
+        // MARK: - Tests
+        .testTarget(name: "MinecraftTests", dependencies: ["Minecraft"])
     ]
 )
