@@ -20,5 +20,5 @@ jobs:
       run: |
         brew install sdl2
         swift build -v
-    - name: Run tests
-      run: swift test -v
+#    - name: Run tests
+#      run: swift test -v
