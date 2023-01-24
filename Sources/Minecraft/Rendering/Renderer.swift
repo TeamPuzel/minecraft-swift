@@ -1,6 +1,10 @@
 
 import GLAD
 
+// TODO: This entire file is terrible
+// Remove all the useless protocols and just focus on structs.
+// Add protocols once they are actually necessary instead of wasting time.
+
 // MARK: - Protocols
 
 protocol Renderer {} // TODO: Design

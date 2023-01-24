@@ -19,9 +19,10 @@ public func unreachable() -> Never {
     return unsafeBitCast((), to: Never.self)
 }
 
-// Pretty `throw "String"` syntax.
+// Pretty `throw "String"` syntax trick found on Stack Overflow.
 extension String: Error {}
 
+// Simplified OpenGL error handling, by default only works in debug mode.
 extension GL {
     
     static private let GLERROR = "GL error:"
@@ -30,7 +31,7 @@ extension GL {
     @inlinable
     @_transparent
     static func checkForErrors() {
-        #if DEBUG
+        #if DEBUG || SHOWGLERRORS
         let error = glad_glGetError()
         switch error {
         case 0: break
@@ -120,7 +121,7 @@ extension GL {
     }
 }
 
-// Colored terminal output
+// Colored terminal output for more readable errors and debugging.
 extension String {
     
     mutating func color(_ color: Color, _ type: ColorType = .foreground) {

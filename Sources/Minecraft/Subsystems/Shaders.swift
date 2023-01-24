@@ -1,6 +1,8 @@
 
 import GLAD
 
+// TODO: Documentation, possibly a better interface.
+
 fileprivate struct ShaderSource {
     
     internal init(code: StaticString, kind: ShaderSource.Kind) {

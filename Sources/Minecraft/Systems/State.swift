@@ -1,6 +1,8 @@
 
 import Distributed
 
+// TODO: Maybe this is a bad idea :)
+
 final distributed actor State {
     
     init(actorSystem: ActorSystem) {
