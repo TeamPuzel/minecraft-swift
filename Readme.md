@@ -8,7 +8,9 @@ and was originally an attempt at porting the project to Swift, however I decided
 ### Why?
 
 The idea for this project is to test how well a protocol based Swift approach can work in a game,
-as well as eventually use a distributed actor system to implement multiplayer.
+~as well as eventually use a distributed actor system to implement multiplayer.~
+
+> Distributed actors were too object oriented, networking will just use structs.
 
 Because the official macOS implementation of Swift is always dynamically linking the standard library
 this means it will only work on macOS 13 and newer, however this is not an issue on
