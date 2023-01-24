@@ -1,14 +1,13 @@
 
 // MARK: - Dependencies
 
-import Distributed // Used for location transparent state.
 import GLAD        // OpenGL function loading.
 import SDL2        // Windowing, audio, context and input.
 
 // MARK: - Program
 
 /// The main enum. It only really exists because Swift has no
-/// actual `@main` functions sadly.
+/// actual `@main` functions yet sadly.
 @main
 enum Main {
     
@@ -19,9 +18,6 @@ enum Main {
     static var event: SDL_Event!
     /// The game state, currently not implemented.
     static var state: State!
-    
-    /// The actor system used for `State`.
-    static let actorSystem = LocalTestingDistributedActorSystem()
     
     /// The main function. It must not be async -
     /// OpenGL is not easy to work with from multiple threads.
@@ -107,9 +103,7 @@ enum Main {
         // it's just a single file with `fileprivate` access control.
         Shaders.initialize()
         
-        // MARK: - Init State
-        
-        self.state = State(actorSystem: self.actorSystem)
+        // TODO: Initialise state
         
         // MARK: OpenGL test
         
